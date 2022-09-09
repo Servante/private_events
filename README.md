@@ -1,24 +1,32 @@
-# README
+# private_events 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Ruby on Rails application demonstrating knowledge of associations and database querying using ActiveRecord. 
 
-Things you may want to cover:
+Users will be able to:
 
-* Ruby version
+* create an account
 
-* System dependencies
+* create new events
 
-* Configuration
+* see available events
 
-* Database creation
+* sign up for events
 
-* Database initialization
+* edit or delete their events
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+---------------------------------------
 
-* Deployment instructions
 
-* ...
+This was a project completed for [The Odin Project's](https://www.theodinproject.com/) Ruby on Rails course. See the project details [here](https://www.theodinproject.com/lessons/ruby-on-rails-private-events)
+
+
+Created with:
+
+Ruby 3.1.2
+
+Rails 7.0.3.1
+
+Additional Gems: Devise 4.8.1
+
+Database: Postgresql
