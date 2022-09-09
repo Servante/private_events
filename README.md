@@ -18,7 +18,7 @@ Users will be able to:
 ---------------------------------------
 
 
-This was a project completed for [The Odin Project's](https://www.theodinproject.com/) Ruby on Rails course. See the project details [here](https://www.theodinproject.com/lessons/ruby-on-rails-private-events)
+This was a project completed for [The Odin Project's](https://www.theodinproject.com/) Ruby on Rails course. See the project details [here](https://www.theodinproject.com/lessons/ruby-on-rails-private-events).
 
 
 Created with:
