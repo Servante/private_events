@@ -1,0 +1,7 @@
+<h1>hosted events</h1>
+
+<ul>
+  <% @user.events.each do |event| %>
+    <li><%= event.title %></li>
+  <% end %>
+</ul>
