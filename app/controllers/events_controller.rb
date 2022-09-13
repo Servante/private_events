@@ -7,13 +7,13 @@ class EventsController < ApplicationController
     @event = Event.new
   end 
 
-  def create
-    @event = current_user.build_event(event_params)
+  # def create
+  #   @event = current_user.build_event(event_params)
 
-    if @event.save
-      redirect_to @event
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
+  #   if @event.save
+  #     redirect_to @event
+  #   else
+  #     # render :new, status: :unprocessable_entity
+  #   end
+  # end
 end
