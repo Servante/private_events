@@ -4,13 +4,15 @@
       <div class="sidebar">
       </div>
       <div class="container">
-
         <h1>Events</h1>
-        <ul>
-          <% @events.each do |event| %>
-            <li><%= event.title%></li>
-          <% end %>
-        </ul>
+        <% @events.each do |event| %>
+          <div class="card">
+            <%= event.title %><br>
+            <%= event.body %><br>
+            <%= event.date %><br>
+            <%= event.creator %><br>
+          </div>
+        <% end %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
       </div>
