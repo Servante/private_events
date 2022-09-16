@@ -1,15 +1,27 @@
 <%= form_with model: @event do |form| %>
   <%=  form.label :title %>
   <%=  form.text_field :title %><br><br>
+  <% @event.errors.full_messages_for(:title).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
 
   <%= form.label :location %>
   <%= form.text_field :location %><br><br>
+  <% @event.errors.full_messages_for(:location).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
 
   <%= form.label :body %>
   <%= form.text_area :body %><br><br>
+  <% @event.errors.full_messages_for(:body).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
 
   <%= form.label :date %>
   <%= form.text_field :date %><br><br>
+  <% @event.errors.full_messages_for(:date).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
 
   <%= form.submit %>
 <% end %>

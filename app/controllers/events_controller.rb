@@ -8,7 +8,8 @@ class EventsController < ApplicationController
   end 
 
   def create
-    @event = current_user.build_event(event_params)
+    # debugger
+    @event = current_user.events.build(event_params)
 
     if @event.save
       redirect_to @event
@@ -16,4 +17,10 @@ class EventsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+
+  private
+    def event_params
+      params.require(:event).permit(:title, :location, :body, :date)
+    end
 end
