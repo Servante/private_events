@@ -1,21 +1,24 @@
 <div class="header">
+  <div class="home-link">Home</div>
+  <div class="site-title">Private Events</div>
+  <div class="user_links"><%= render "pages/login_links" %></div>
+</div>
+<div class="body">
+  <div class="sidebar">
   </div>
-    <div class="body">
-      <div class="sidebar">
+  <div class="container">
+    <h1>Events</h1>
+    <% @events.each do |event| %>
+      <div class="card">
+        <%= event.title %><br>
+        <%= event.body %><br>
+        <%= event.date %><br>
+        <%= event.creator %><br>
       </div>
-      <div class="container">
-        <h1>Events</h1>
-        <% @events.each do |event| %>
-          <div class="card">
-            <%= event.title %><br>
-            <%= event.body %><br>
-            <%= event.date %><br>
-            <%= event.creator %><br>
-          </div>
-        <% end %>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      </div>
-    </div>
-  <div class="footer">
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</div>
+<div class="footer">
 </div>

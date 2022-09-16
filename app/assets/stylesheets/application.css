@@ -27,9 +27,14 @@ body {
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 16px;
   font-size: 32px;
   font-weight: 900
+}
+
+.session-links {
+  
 }
 
 .body {
