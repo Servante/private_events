@@ -10,6 +10,11 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <div class="header">
+      <div class="home-link">Home</div>
+      <div class="site-title">Private Events</div>
+      <div class="user_links"><%= render "pages/login_links" %></div>
+    </div>
     <%= yield %>
   </body>
 </html>
