@@ -1,0 +1,10 @@
+<div class="session-links">
+  <% if user_signed_in? %>
+    <ul>
+      <div class="username"><li><%= "Signed in as: #{current_user.email}" %></li>
+      <div class="signout_button"><li><%= button_to "sign out", destroy_user_session_path, method: :delete %></li></div>
+    </ul>
+  <% else %>
+    <div class="signin-up-link"><%= link_to "Sign in", new_user_session_path %> or <%= link_to "Sign up", new_user_registration_path %></div>
+  <% end %>
+</div>
