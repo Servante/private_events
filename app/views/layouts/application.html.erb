@@ -11,7 +11,9 @@
   </head>
   <body>
     <div class="header">
-      <div class="home-link">Home</div>
+      <div class="home-link">
+        <%= link_to "Home", root_path %>
+      </div>
       <div class="site-title">Private Events</div>
       <div class="user_links"><%= render "pages/login_links" %></div>
     </div>
