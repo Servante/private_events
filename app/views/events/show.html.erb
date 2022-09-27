@@ -1,4 +1,6 @@
 <h1><%= @event.title %></h1>
 <p><%= @event.location %></p>
 <p><%= @event.body %></p>
-<p><%= @event.date %></p>
+<p><%= @event.date %></p><br><br>
+
+<div class="button"><%= button_to "Attend this Event", new_invitation_path, method: :get %>
