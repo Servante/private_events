@@ -8,12 +8,4 @@ class InvitationsController < ApplicationController
   def create
     debugger
   end
-
-
-
-
-
-
-
-
 end
