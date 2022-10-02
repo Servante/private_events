@@ -3,4 +3,5 @@
 <p><%= @event.body %></p>
 <p><%= @event.date %></p><br><br>
 
-<div class="button"><%= button_to "Attend this Event", new_invitation_path, method: :get %>
+<div class="button"><%= button_to "Attend this Event", invitations_path(id: @event.id), method: :post %>
+
