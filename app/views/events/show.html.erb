@@ -3,5 +3,10 @@
 <p><%= @event.body %></p>
 <p><%= @event.date %></p><br><br>
 
-<div class="button"><%= button_to "Attend this Event", invitations_path(id: @event.id), method: :post %>
+<% if current_user.attended_events.include?(@event)%>
+  <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %>
+<% else %>
+  <div class="button"><%= button_to "Attend Event", invitations_path(id: @event.id), method: :post %>
+<% end %>
+
 
