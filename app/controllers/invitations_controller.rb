@@ -10,4 +10,11 @@ class InvitationsController < ApplicationController
       render :show, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    event = Event.find(params[:id])
+    invite = event.invitations.select {|invite| invite.attendee_id == current_user.id}
+    invite[0].destroy
+    redirect_to root_path
+  end
 end
