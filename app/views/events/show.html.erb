@@ -7,9 +7,17 @@
 <% end %>
 
 <% if current_user.attended_events.include?(@event)%>
-  <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %>
+  <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %></div><br>
 <% else %>
-  <div class="button"><%= button_to "Attend Event", invitations_path(id: @event.id), method: :post %>
+  <div class="button"><%= button_to "Attend Event", invitations_path(id: @event.id), method: :post %></div><br>
 <% end %>
 
+<h2>Guests Attending:</h2>
 
+<ul>
+  <% @event.attendees.each do |guest| %>    
+    <li>
+      <%= guest.username %>
+    </li>
+  <% end %>
+</ul>
