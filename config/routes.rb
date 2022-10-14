@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   root "pages#index"
   resources :events
   resources :invitations
+  resources :users
 end
