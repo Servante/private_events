@@ -2,6 +2,9 @@
 <p><%= @event.location %></p>
 <p><%= @event.body %></p>
 <p><%= @event.date %></p><br><br>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: name %><br>
+<% end %>
 
 <% if current_user.attended_events.include?(@event)%>
   <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %>
