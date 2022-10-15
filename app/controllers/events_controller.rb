@@ -36,8 +36,12 @@ class EventsController < ApplicationController
     end    
   end
 
-  # def destroy
-  # end
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    
+    redirect_to root_path, status: :see_other
+  end
 
   private
     def event_params
