@@ -1,7 +1,15 @@
-<h1>hosted events</h1>
+<h1>Profile</h1>
+<div>
+  <div>username: <%= @user.username %></div><br>
+  <div>email: <%= @user.email %></div><br><br>
+  <div><%= link_to "edit profile", edit_user_registration_path %></div>
+</div>
 
-<ul>
-  <% @user.created_events.each do |event| %>
-    <li><%= link_to event.title, event  %></li>
-  <% end %>
-</ul>
+<div>
+  <h3>Hosted events</h3>
+  <ul>
+    <% @user.created_events.each do |event| %>
+      <li><%= link_to event.title, event  %></li>
+    <% end %>
+  </ul>
+</div>
