@@ -18,7 +18,7 @@
   <% end %>
 
   <%= form.label :date %>
-  <%= form.text_field :date %><br><br>
+  <%= form.date_field :date %><br><br>
   <% @event.errors.full_messages_for(:date).each do |message| %>
     <div><%= message %></div>
   <% end %>
