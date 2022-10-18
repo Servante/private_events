@@ -6,11 +6,11 @@
     <%# <h1>Events</h1> %>
     <% @events.each do |event| %>
       <div class="card">
-        <%= event.title %><br>
-        <%= event.body %><br>
-        <%= event.date %><br>
-        <%= event.creator.username %><br>
-        <%= link_to "See this event", event %>
+        <div class="card-title"><h3><%= event.title %></h3></div>
+        <div class="card-body"><%= event.body %></div> 
+        <div class="card-date"><strong>Date: </strong><%= event.date.strftime("%m/%d/%Y") %></div>
+        <div class="card-location"><strong>Location: </strong><%= event.location %></div>
+        <div class="event-link"><%= link_to "See this event", event %></div>
       </div>
     <% end %>
     <p class="notice"><%= notice %></p>

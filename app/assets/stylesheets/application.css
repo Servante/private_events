@@ -51,8 +51,38 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* align-content: center; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;  
 }
 
+.card-title {
+  text-transform: capitalize;
+}
+
+.card-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal; 
+}
+
+.card-date {
+  margin-top: auto;
+}
+
+.card-location {
+  /* flex-grow: 1; */
+  text-transform: capitalize;
+}
+
+.event-link {
+  /* padding-top: 40px */
+}
 .body {
   flex: 1;
   display: flex
