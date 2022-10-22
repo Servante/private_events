@@ -1,33 +1,40 @@
-<h1><%= @event.title %></h1>
-<p><%= @event.location %></p>
-<p><%= @event.body %></p>
-<p><%= @event.date %></p><br><br>
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %><br>
-<% end %>
+<div class="page">
+  <div class="container-1">
+    <h1><%= @event.title %></h1>
+    <p><strong>Location:</strong><br><%= @event.location %></p>
+    <p><strong>Description:</strong><br><%= @event.body %></p>
+    <p><strong>Date/Time:</strong><br><%= @event.date.strftime("%m/%d/%Y %I:%M %p") %></p>
+    <p><strong>Host:</strong><br><%= @event.creator.username %></p><br><br>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %><br>
+    <% end %>
 
-<% if current_user != nil && current_user.attended_events.include?(@event)%>
-  <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %></div><br>
-<% elsif current_user == nil %>
-  <div>Sign in to attend this event!</div>
-<% else %>
-  <div class="button"><%= button_to "Attend Event", invitations_path(id: @event.id), method: :post %></div><br>
-<% end %>
+    <% if current_user != nil && current_user.attended_events.include?(@event)%>
+      <div class="button"><%= button_to "Cancel Invite", invitation_path(id: @event.id), method: :delete %></div><br>
+    <% elsif current_user == nil %>
+      <div>Sign in to attend this event!</div>
+    <% else %>
+      <div class="button"><%= button_to "Attend Event", invitations_path(id: @event.id), method: :post %></div><br>
+    <% end %>
 
-<% if @event.creator == current_user %>
-  <%= link_to "Edit Event", edit_event_path %>
-  <%= link_to "Cancel Event", event_path(@event), data: {
-    turbo_method: :delete, 
-    turbo_confirm: "Are you sure?"
-  }%>
-<% end %>
+    <% if @event.creator == current_user %>
+      <%= link_to "Edit Event", edit_event_path %>
+      <%= link_to "Cancel Event", event_path(@event), data: {
+        turbo_method: :delete, 
+        turbo_confirm: "Are you sure?"
+      }%>
+    <% end %>
+  </div>
 
-<h2>Guests Attending:</h2>
+  <div class="container-2">
+    <h2>Guests Attending:</h2>
 
-<ul>
-  <% @event.attendees.each do |guest| %>    
-    <li>
-      <%= guest.username %>
-    </li>
-  <% end %>
-</ul>
+    <ul>
+      <% @event.attendees.each do |guest| %>    
+        <li>
+          <%= guest.username %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

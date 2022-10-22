@@ -31,12 +31,22 @@ body {
   padding: 0 16px;
   font-size: 32px;
   font-weight: 900;
+  padding: 0 32px 0 32px;
+}
+
+.home-link{
+  font-size: 20px;
 }
 
 .user-links {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-left: -160px;
+}
+
+.signin-up-link {
+  font-size: 20px;
 }
 
 .username {
@@ -44,7 +54,9 @@ body {
   margin-top: .5em;
 }
 
-.container {
+.container {border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 4px;
   padding: 32px;
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +70,6 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  /* align-content: center; */
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -83,13 +94,9 @@ body {
 }
 
 .card-location {
-  /* flex-grow: 1; */
   text-transform: capitalize;
 }
 
-.event-link {
-  /* padding-top: 40px */
-}
 .body {
   flex: 1;
   display: flex
@@ -101,6 +108,43 @@ body {
 }
 
 .sidebar {
-  width: 300px;
-  background: forestgreen
+  width: 600px;
+  background: forestgreen;
+  padding: 16px;
+}
+
+.sidebar-links ul {
+  font-size: 24px;
+  list-style: none;
+}
+
+.sidebar-links li {
+  margin: 10px 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-1 {
+  margin-top: 80px;
+  width: 500px;
+  text-align: center;
+}
+
+.container-2 {
+  margin-top: 18px;
+}
+
+.container-1, .container-2 {
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 4px;
+  padding: 16px;
 }

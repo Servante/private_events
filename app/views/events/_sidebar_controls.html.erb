@@ -1,8 +1,8 @@
-<div class="sidebar_links">
+<div class="sidebar-links">
   <ul>
     <% if user_signed_in? %>
-      <li><%= link_to "create", new_event_path %></li>
-      <li><%= link_to "profile", users_show_path(id: current_user.id) %></li>
+      <li><%= link_to "Create an Event", new_event_path %></li>
+      <li><%= link_to "User Profile", users_show_path(id: current_user.id) %></li>
   </ul>
     <% else %>
       <li>Please sign in to create an event.</li>
