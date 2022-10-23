@@ -1,6 +1,6 @@
 <%= form_with model: @event do |form| %>
  <strong><%=  form.label :title %>:</strong><br>
-  <%=  form.text_field :title %><br><br>
+  <%=  form.text_field :title, style: 'text-transform: capitalize;' %><br><br>
   <% @event.errors.full_messages_for(:title).each do |message| %>
     <div><%= message %></div>
   <% end %>
