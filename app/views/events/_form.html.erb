@@ -1,23 +1,23 @@
 <%= form_with model: @event do |form| %>
-  <%=  form.label :title %>
+ <strong><%=  form.label :title %>:</strong><br>
   <%=  form.text_field :title %><br><br>
   <% @event.errors.full_messages_for(:title).each do |message| %>
     <div><%= message %></div>
   <% end %>
 
-  <%= form.label :location %>
+  <strong><%= form.label :location %>:</strong><br>
   <%= form.text_field :location %><br><br>
   <% @event.errors.full_messages_for(:location).each do |message| %>
     <div><%= message %></div>
   <% end %>
 
-  <%= form.label :body %>
-  <%= form.text_area :body %><br><br>
+  <strong><%= form.label :body %>:</strong><br>
+  <%= form.text_area :body, size: "30x10" %><br><br>
   <% @event.errors.full_messages_for(:body).each do |message| %>
     <div><%= message %></div>
   <% end %>
 
-  <%= form.label :date %>
+  <strong><%= form.label :date %>:</strong><br>
   <%= form.datetime_field :date %><br><br>
   <% @event.errors.full_messages_for(:date).each do |message| %>
     <div><%= message %></div>

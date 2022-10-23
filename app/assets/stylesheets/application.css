@@ -146,5 +146,20 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  padding: 16px;
+  padding: 16px 16px 50px 16px;
 }
+
+.events {
+  list-style: none;
+  padding-left: 0;
+}
+
+.events a {
+  text-decoration: none;
+}
+
+.container-2.hosted-events {
+  text-align: center;
+}
+
+
