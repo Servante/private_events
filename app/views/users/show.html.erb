@@ -1,4 +1,3 @@
-
 <div class="page">
   <div class="container-1">
     <h1>Profile</h1>
@@ -9,16 +8,31 @@
     </div>
   </div>
     <div class="container-2 hosted-events">
-      <h3>Hosted events</h3>
-      <ul class="events">
-        <% @user.created_events.each do |event| %>
-          <li><%= link_to event.title, event  %></li>
-        <% end %>
-      </ul>
-    </div>
+      <div class="past-events">
+        <h3>Previously Attended Events</h3>
+        <ul class="events">
+          <% @user.attended_events.each do |event| %>
+            <% if event.date.before?(Time.now) %>
+              <li><%= link_to event.title, event  %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="future-events">
+        <h3>Future Attending Events</h3>
+        <ul class="events">
+          <% @user.attended_events.each do |event| %>
+            <% if event.date.after?(Time.now) %>
+              <li><%= link_to event.title, event  %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+   </div>
 </div>
 
 
+            
 
 
 

@@ -137,9 +137,12 @@ body {
 
 .container-2 {
   margin-top: 18px;
+  display: flex;
+  gap: 24px;
+  text-align: center;
 }
 
-.container-1, .container-2 {
+.container-1, .past-events, .future-events {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
@@ -155,8 +158,6 @@ body {
   text-decoration: none;
 }
 
-.container-2.hosted-events {
-  text-align: center;
-}
+
 
 
