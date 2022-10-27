@@ -18,12 +18,17 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  background-color: #FA8CE6;
+}
+
+body {
+  /* background-color: #F0AE86; */
 }
 
 .header {
   height: 72px;
-  background: royalblue;
+  background: #BCFDF1;
   color: white;
   display: flex;
   align-items: center;
@@ -34,8 +39,17 @@ body {
   padding: 0 32px 0 32px;
 }
 
+.site-title {
+  color: #747AE3;
+}
+
 .home-link{
   font-size: 20px;
+}
+
+.home-link a {
+  color: #FA8CE6;
+  text-decoration: none;
 }
 
 .user-links {
@@ -43,6 +57,9 @@ body {
   align-items: center;
   gap: 24px;
   margin-left: -160px;
+  color: #F0AE86;
+  font-size: 20px;
+  margin-top: .5em;
 }
 
 .signin-up-link {
@@ -51,10 +68,18 @@ body {
 
 .username {
   font-size: 20px;
-  margin-top: .5em;
+  /* margin-top: .5em; */
+  margin-left: -8px;
+  color: #747AE3;
 }
 
-.container {
+.index-title {
+  text-align: center;
+  color: #FFEC69;
+  /* background-color: #FA8CE6; */
+}
+
+.container .f-events, .p-events {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
@@ -67,8 +92,8 @@ body {
   padding: 16px;
   margin: 16px;
   width: 300px;
-  max-height: 250px;
-  border: 1px solid #eee;
+  height: 250px;
+  border: 5px solid #BCFDF1;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   display: flex;
@@ -101,13 +126,15 @@ body {
 
 .footer {
   height: 72px;
-  background: firebrick;
+  background-color: #FA8CE6;
 }
 
 .sidebar {
-  width: 600px;
-  background: forestgreen;
+  width: 212px;
+  height: 100;
   padding: 16px;
+  flex-shrink: 0;
+  background-color: #747AE3; 
 }
 
 .sidebar-links ul {
@@ -121,6 +148,8 @@ body {
 
 .sidebar-links a {
   text-decoration: none;
+  color: #FFEC69;
+  font-weight: bold;
 }
 
 .page {
@@ -142,7 +171,7 @@ body {
   text-align: center;
 }
 
-.container-1, .past-events, .future-events {
+.container-1, .past-events, .future-events, .guests-attending {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
@@ -158,6 +187,15 @@ body {
   text-decoration: none;
 }
 
+.f-events, .p-events {
+  background-color: #F0AE86;
+  /* margin: none; */
+}
 
+.container {
+  padding: 32px;
+  margin: 42px;
+  /* max-width: 1400px; */
+}
 
 
