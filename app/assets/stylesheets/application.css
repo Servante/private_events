@@ -183,6 +183,25 @@ body {
   padding: 16px 16px 50px 16px;
 }
 
+.guests-attending {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.ga-title {
+  margin-bottom: -24px;
+}
+
+.attendee-list {
+  width: 100px;
+  padding: 24px;
+}
+
+.attendee-list a {
+  text-decoration: none;
+}
+
 .events {
   list-style: none;
   padding-left: 0;

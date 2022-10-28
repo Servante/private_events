@@ -27,14 +27,15 @@
   </div>
 
   <div class="container-2 guests-attending">
-    <h2>Guests Attending:</h2>
-
-    <ul>
-      <% @event.attendees.each do |guest| %>    
-        <li>
-          <%= guest.username %>
-        </li>
-      <% end %>
-    </ul>
+    <div class="ga-title"><h2>Guests Attending</h2></div>
+    <div class="attendee-list">
+      <ul>
+        <% @event.attendees.each do |guest| %>
+          <li>
+            <%= link_to "#{guest.username}", users_show_path(id: guest.id)  %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
