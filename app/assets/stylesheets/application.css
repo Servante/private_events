@@ -52,11 +52,17 @@ body {
   text-decoration: none;
 }
 
+.left-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
 .user-links {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-left: -94px;
+  margin-left: -64px;
   color: #F0AE86;
   font-size: 20px;
   margin-top: .5em;
@@ -66,11 +72,24 @@ body {
   font-size: 20px;
 }
 
+.create-event {
+  margin-bottom: 7px;
+}
+
+.create-event a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .username {
   font-size: 20px;
   /* margin-top: .5em; */
   margin-left: -8px;
+}
+
+.username a {
   color: #747AE3;
+  text-decoration: none;
 }
 
 .index-title {
@@ -130,27 +149,10 @@ body {
   background-color: #FA8CE6;
 }
 
-.sidebar {
-  width: 212px;
-  height: 100;
-  padding: 16px;
-  flex-shrink: 0;
-  background-color: #747AE3; 
-}
-
-.sidebar-links ul {
-  font-size: 24px;
-  list-style: none;
-}
-
-.sidebar-links li {
-  margin: 10px 0;
-}
-
-.sidebar-links a {
-  text-decoration: none;
-  color: #FFEC69;
-  font-weight: bold;
+.sign-in-req {
+  font-size: 20px;
+  color: orange;
+  margin-right: -91px;
 }
 
 .page {
@@ -194,7 +196,7 @@ body {
 }
 
 .container {
-  padding: 32px;
+  padding: 36px;
   margin: 42px;
   /* max-width: 1400px; */
 }

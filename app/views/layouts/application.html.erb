@@ -11,8 +11,19 @@
   </head>
   <body>
     <div class="header">
-      <div class="home-link">
-        <%= link_to "Home", root_path %>
+      <div class="left-links">
+        <div class="home-link">
+          <%= link_to "Home", root_path %>
+        </div>
+        <% if user_signed_in? %>
+          <div class="create-event">
+            <%= link_to "Create Event", new_event_path %>
+          </div>
+        <% else %>
+          <div class="sign-in-req">
+            Please Sign in
+          </div> 
+        <% end %>  
       </div>
       <div class="site-title">Private Events</div>
       <div class="user-links"><%= render "pages/login_links" %></div>
