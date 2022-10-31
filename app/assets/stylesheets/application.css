@@ -22,10 +22,6 @@ body {
   background-color: #FA8CE6;
 }
 
-body {
-  /* background-color: #F0AE86; */
-}
-
 .header {
   height: 72px;
   background: #BCFDF1;
@@ -83,7 +79,6 @@ body {
 
 .username {
   font-size: 20px;
-  /* margin-top: .5em; */
   margin-left: -8px;
 }
 
@@ -96,7 +91,6 @@ body {
   text-align: center;
   color: #FFEC69;
   margin-bottom: 65px;
-  /* background-color: #FA8CE6; */
 }
 
 .container .f-events, .p-events {
@@ -173,7 +167,6 @@ body {
   display: flex;
   gap: 24px;
   text-align: center;
-  background-color: #F0AE86
 }
 
 .container-1, .past-events, .future-events, .guests-attending {
@@ -181,6 +174,7 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
   padding: 16px 16px 50px 16px;
+  background-color: #F0AE86;
 }
 
 .guests-attending {
@@ -213,13 +207,11 @@ body {
 
 .f-events, .p-events {
   background-color: #F0AE86;
-  /* margin: none; */
 }
 
 .container {
   padding: 36px;
   margin: 42px;
-  /* max-width: 1400px; */
 }
 
 
