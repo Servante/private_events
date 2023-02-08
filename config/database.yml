@@ -79,3 +79,12 @@ test:
   username: wesley
   password:
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: private_events
+  pool: 5
+  username: wesley
+  password:
+  timeout: 5000
