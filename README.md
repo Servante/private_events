@@ -6,6 +6,8 @@ Users will be able to:
 
 * create an account
 
+* sign in and out of account
+
 * create new events
 
 * see available events
